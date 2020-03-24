@@ -1,0 +1,57 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - Auth0 (1.15.0):
+    - SimpleKeychain
+  - IQKeyboardManager (6.3.0)
+  - Lock (2.10.1):
+    - Auth0 (~> 1.13)
+    - Lock/Classic (= 2.10.1)
+  - Lock/Classic (2.10.1):
+    - Auth0 (~> 1.13)
+  - ObjectMapper (3.4.2)
+  - OneSignal (2.10.0)
+  - ReachabilitySwift (4.3.1)
+  - SimpleKeychain (0.9.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - AlamofireImage (~> 3.5)
+  - AlamofireObjectMapper (~> 5.2)
+  - IQKeyboardManager
+  - Lock
+  - OneSignal (< 3.0, >= 2.6.2)
+  - ReachabilitySwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - AlamofireObjectMapper
+    - Auth0
+    - IQKeyboardManager
+    - Lock
+    - ObjectMapper
+    - OneSignal
+    - ReachabilitySwift
+    - SimpleKeychain
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  Auth0: b741c805711a80eb698fce55d354cc32e0784dce
+  IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
+  Lock: b99c984b607a921260068efc967026dccc5b5cc6
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  OneSignal: 0f5ff711d9f25da54885e4ab06ef0abc221a46ef
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  SimpleKeychain: 3be49072fd2d82de8fa83d847ef1e548622f8fc5
+
+PODFILE CHECKSUM: d740be2056a3cd6e079795f40b4ac74e00cf1423
+
+COCOAPODS: 1.7.0.beta.3

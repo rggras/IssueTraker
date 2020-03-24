@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rIe-6M-E64">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard-->
+        <scene sceneID="wy2-1r-Dxo">
+            <objects>
+                <tableViewController id="6q8-W6-SWa" customClass="IssuesViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TZQ-nF-w8v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="IssueTableViewCell" rowHeight="60" id="cFT-Bn-5UW" customClass="IssueTableViewCell" customModule="IssueTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cFT-Bn-5UW" id="dEL-RA-FxQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-TX-Aq6">
+                                            <rect key="frame" x="20" y="10" width="296" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4N-x2-CXT">
+                                            <rect key="frame" x="20" y="31" width="296" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="tkA-ef-kME">
+                                            <rect key="frame" x="326" y="15" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="QgL-ly-zuq"/>
+                                                <constraint firstAttribute="height" constant="30" id="R28-ed-yYv"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="tkA-ef-kME" secondAttribute="trailing" constant="20" id="EZL-O3-0oh"/>
+                                        <constraint firstItem="qJw-TX-Aq6" firstAttribute="top" secondItem="dEL-RA-FxQ" secondAttribute="top" constant="10" id="M7x-F3-1pO"/>
+                                        <constraint firstItem="tkA-ef-kME" firstAttribute="leading" secondItem="qJw-TX-Aq6" secondAttribute="trailing" constant="10" id="NIh-a0-eds"/>
+                                        <constraint firstItem="S4N-x2-CXT" firstAttribute="trailing" secondItem="qJw-TX-Aq6" secondAttribute="trailing" id="TO4-7D-csu"/>
+                                        <constraint firstItem="S4N-x2-CXT" firstAttribute="top" secondItem="qJw-TX-Aq6" secondAttribute="bottom" id="dYT-sg-4Iu"/>
+                                        <constraint firstItem="tkA-ef-kME" firstAttribute="centerY" secondItem="dEL-RA-FxQ" secondAttribute="centerY" id="g46-fG-BUY"/>
+                                        <constraint firstItem="qJw-TX-Aq6" firstAttribute="leading" secondItem="dEL-RA-FxQ" secondAttribute="leading" constant="20" id="iHM-L4-Zbf"/>
+                                        <constraint firstItem="S4N-x2-CXT" firstAttribute="leading" secondItem="qJw-TX-Aq6" secondAttribute="leading" id="u5g-LO-CZr"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="qJw-TX-Aq6" id="8pa-aM-aNt"/>
+                                    <outlet property="profileImage" destination="tkA-ef-kME" id="DD0-Fg-QmU"/>
+                                    <outlet property="statusLabel" destination="S4N-x2-CXT" id="WTc-zf-Vl8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6q8-W6-SWa" id="BTf-U7-GLi"/>
+                            <outlet property="delegate" destination="6q8-W6-SWa" id="AJc-ag-ydX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Dashboard" id="oVR-1p-PMR">
+                        <barButtonItem key="backBarButtonItem" title=" " id="RHi-Ux-x3M"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="TabBarAdministrations" id="W9L-U1-zlp">
+                            <connections>
+                                <action selector="didPressAdministrations:" destination="6q8-W6-SWa" id="iH6-AS-tsM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="S5z-hK-N5j" kind="show" identifier="AddIssue" id="B4w-UN-PZl"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHW-4D-gUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205.79710144927537" y="120.53571428571428"/>
+        </scene>
+        <!--AddIssue-->
+        <scene sceneID="zz0-Bs-4yy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddIssue" id="S5z-hK-N5j" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q60-Mo-hho" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="121"/>
+        </scene>
+        <!--Main Navigation View Controller-->
+        <scene sceneID="9AO-aR-JDI">
+            <objects>
+                <navigationController id="rIe-6M-E64" customClass="MainNavigationViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hNQ-l1-gob">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6q8-W6-SWa" kind="relationship" relationship="rootViewController" id="2zP-sO-wte"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kej-Ad-e8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-597" y="121"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ProfilePlaceholder" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="TabBarAdministrations" width="30" height="30"/>
+    </resources>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KeN-ti-ePc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="SHK-4Q-2ed">
+            <objects>
+                <viewController id="KeN-ti-ePc" customClass="LoginViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UqG-Oi-qlZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXz-4v-vy6">
+                                <rect key="frame" x="20" y="112" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUH-vS-hwc" customClass="MainButton" customModule="IssueTracker" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="173" width="300" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Sjd-Xw-DHK"/>
+                                    <constraint firstAttribute="width" constant="300" id="UYJ-HT-QzB"/>
+                                </constraints>
+                                <state key="normal" title="Enter here"/>
+                                <connections>
+                                    <action selector="didPressAuth0:" destination="KeN-ti-ePc" eventType="touchUpInside" id="cnI-t7-vIQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0I-QZ-Fxz">
+                                <rect key="frame" x="126.5" y="610" width="122" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Terms and conditions"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p0I-QZ-Fxz" firstAttribute="centerX" secondItem="Ur9-Q4-ICT" secondAttribute="centerX" id="AZ0-QM-hoC"/>
+                            <constraint firstItem="dXz-4v-vy6" firstAttribute="top" secondItem="Ur9-Q4-ICT" secondAttribute="top" constant="92" id="CTE-Pa-uHV"/>
+                            <constraint firstItem="dXz-4v-vy6" firstAttribute="trailing" secondItem="Ur9-Q4-ICT" secondAttribute="trailing" constant="-20" id="E5K-XH-VGF"/>
+                            <constraint firstItem="HUH-vS-hwc" firstAttribute="centerX" secondItem="Ur9-Q4-ICT" secondAttribute="centerX" id="Hgr-XF-R8n"/>
+                            <constraint firstItem="p0I-QZ-Fxz" firstAttribute="bottom" secondItem="Ur9-Q4-ICT" secondAttribute="bottom" constant="-30" id="IJd-gB-vgs"/>
+                            <constraint firstItem="HUH-vS-hwc" firstAttribute="top" secondItem="dXz-4v-vy6" secondAttribute="bottom" constant="40" id="OwW-dj-Vse"/>
+                            <constraint firstItem="dXz-4v-vy6" firstAttribute="leading" secondItem="Ur9-Q4-ICT" secondAttribute="leading" constant="20" id="bmO-2t-u3e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ur9-Q4-ICT"/>
+                    </view>
+                    <connections>
+                        <outlet property="auth0Button" destination="HUH-vS-hwc" id="ta7-qi-B2Z"/>
+                        <outlet property="titleLabel" destination="dXz-4v-vy6" id="THK-E5-CXm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yge-sF-DYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="10"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A32-D5-fUM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Invite Member-->
+        <scene sceneID="DsD-NX-Yu4">
+            <objects>
+                <tableViewController id="A32-D5-fUM" customClass="AddMemberViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="140" id="NkL-TI-y5W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="zry-x0-8bd">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="oRg-UK-Xnr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oRg-UK-Xnr" id="Ana-ZG-Pag">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUD-63-eRm">
+                                                    <rect key="frame" x="16" y="8" width="382" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWo-o8-wBb">
+                                                    <rect key="frame" x="16" y="22.5" width="382" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="cd2-Yf-pge"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WWo-o8-wBb" firstAttribute="trailing" secondItem="eUD-63-eRm" secondAttribute="trailing" id="2uc-vB-GEz"/>
+                                                <constraint firstItem="eUD-63-eRm" firstAttribute="top" secondItem="Ana-ZG-Pag" secondAttribute="top" constant="8" id="Znu-F5-ZeD"/>
+                                                <constraint firstItem="WWo-o8-wBb" firstAttribute="leading" secondItem="eUD-63-eRm" secondAttribute="leading" id="bAA-eu-Jrd"/>
+                                                <constraint firstItem="WWo-o8-wBb" firstAttribute="top" secondItem="eUD-63-eRm" secondAttribute="bottom" id="fW5-RU-wGT"/>
+                                                <constraint firstAttribute="trailing" secondItem="eUD-63-eRm" secondAttribute="trailing" constant="16" id="nQF-L8-RRH"/>
+                                                <constraint firstItem="eUD-63-eRm" firstAttribute="leading" secondItem="Ana-ZG-Pag" secondAttribute="leading" constant="16" id="oWQ-ev-HaH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="A32-D5-fUM" id="fYp-QK-Gpf"/>
+                            <outlet property="delegate" destination="A32-D5-fUM" id="sKL-F0-3qE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Invite Member" id="YH2-fR-euw">
+                        <barButtonItem key="backBarButtonItem" title=" " id="vrC-gg-1Op"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="lc2-zN-vdx">
+                            <connections>
+                                <action selector="didPressSave:" destination="A32-D5-fUM" id="7GA-nF-WZh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="eUD-63-eRm" id="hlT-RM-5iB"/>
+                        <outlet property="emailTextfield" destination="WWo-o8-wBb" id="lXs-LB-Tvc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gI4-Hi-W6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="-250.44642857142856"/>
+        </scene>
+    </scenes>
+</document>
